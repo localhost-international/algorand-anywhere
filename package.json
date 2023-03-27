@@ -1,0 +1,28 @@
+{
+  "name": "react-native-algorand-sdk",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "api:codegen": "dotenv cross-var \"swagger-codegen generate -i %ALGO_NODE_TESTNET%/swagger.json -a 'x-api-key: %ALGO_NODE_API_KEY%' -l typescript-axios -o ./packages/api --additional-properties npmName=api,npmVersion=0.1.0\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "packages/api",
+    "packages/sdk"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localhost-international/react-native-algorand-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/localhost-international/react-native-algorand-sdk/issues"
+  },
+  "homepage": "https://github.com/localhost-international/react-native-algorand-sdk#readme",
+  "dependencies": {
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^7.1.0"
+  }
+}
