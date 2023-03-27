@@ -1,9 +1,9 @@
 # Local
-api/
+# api/
 .env*
 
 # Node
-node_modules/
+node_modules
 .expo/
 dist/
 yarn-error.*
