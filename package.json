@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "api:codegen": "dotenv cross-var \"swagger-codegen generate -i %ALGO_NODE_TESTNET%/swagger.json -a 'x-api-key: %ALGO_NODE_API_KEY%' -l typescript-axios -o ./packages/api --additional-properties npmName=api,npmVersion=0.1.0\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api:codegen": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_TESTNET%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/api --additional-properties='npmName=api,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\""
   },
   "workspaces": [
     "packages/api",
@@ -24,5 +23,8 @@
   "dependencies": {
     "cross-var": "^1.1.0",
     "dotenv-cli": "^7.1.0"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2"
   }
 }
