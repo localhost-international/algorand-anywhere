@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Algod Testnet V3 API v2
+ * Algod Mainnet V3 API v2
  * V2 API endpoint for algod operations.
  *
  * The version of the OpenAPI document: 3.15.0
@@ -2457,14 +2457,14 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * 
-         * @param {File} mODEL155694 
+         * @param {File} mODELe34253 
          * @param {string} [sourcemap] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tealCompile: async (mODEL155694: File, sourcemap?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'mODEL155694' is not null or undefined
-            assertParamExists('tealCompile', 'mODEL155694', mODEL155694)
+        tealCompile: async (mODELe34253: File, sourcemap?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'mODELe34253' is not null or undefined
+            assertParamExists('tealCompile', 'mODELe34253', mODELe34253)
             const localVarPath = `/v2/teal/compile`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2491,7 +2491,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(mODEL155694, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(mODELe34253, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2501,15 +2501,15 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * 
          * @param {string} contentType 
-         * @param {string} mODEL4228a9 
+         * @param {string} mODEL0c300b 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tealDisassemble: async (contentType: string, mODEL4228a9: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+        tealDisassemble: async (contentType: string, mODEL0c300b: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'contentType' is not null or undefined
             assertParamExists('tealDisassemble', 'contentType', contentType)
-            // verify required parameter 'mODEL4228a9' is not null or undefined
-            assertParamExists('tealDisassemble', 'mODEL4228a9', mODEL4228a9)
+            // verify required parameter 'mODEL0c300b' is not null or undefined
+            assertParamExists('tealDisassemble', 'mODEL0c300b', mODEL0c300b)
             const localVarPath = `/v2/teal/disassemble`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2536,7 +2536,7 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(mODEL4228a9, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(mODEL0c300b, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3728,24 +3728,24 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {File} mODEL155694 
+         * @param {File} mODELe34253 
          * @param {string} [sourcemap] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tealCompile(mODEL155694: File, sourcemap?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CompileResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tealCompile(mODEL155694, sourcemap, options);
+        async tealCompile(mODELe34253: File, sourcemap?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CompileResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tealCompile(mODELe34253, sourcemap, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} contentType 
-         * @param {string} mODEL4228a9 
+         * @param {string} mODEL0c300b 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async tealDisassemble(contentType: string, mODEL4228a9: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DisassembleResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.tealDisassemble(contentType, mODEL4228a9, options);
+        async tealDisassemble(contentType: string, mODEL0c300b: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DisassembleResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.tealDisassemble(contentType, mODEL0c300b, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4276,23 +4276,23 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * 
-         * @param {File} mODEL155694 
+         * @param {File} mODELe34253 
          * @param {string} [sourcemap] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tealCompile(mODEL155694: File, sourcemap?: string, options?: any): AxiosPromise<CompileResponse> {
-            return localVarFp.tealCompile(mODEL155694, sourcemap, options).then((request) => request(axios, basePath));
+        tealCompile(mODELe34253: File, sourcemap?: string, options?: any): AxiosPromise<CompileResponse> {
+            return localVarFp.tealCompile(mODELe34253, sourcemap, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {string} contentType 
-         * @param {string} mODEL4228a9 
+         * @param {string} mODEL0c300b 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        tealDisassemble(contentType: string, mODEL4228a9: string, options?: any): AxiosPromise<DisassembleResponse> {
-            return localVarFp.tealDisassemble(contentType, mODEL4228a9, options).then((request) => request(axios, basePath));
+        tealDisassemble(contentType: string, mODEL0c300b: string, options?: any): AxiosPromise<DisassembleResponse> {
+            return localVarFp.tealDisassemble(contentType, mODEL0c300b, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4793,23 +4793,23 @@ export interface DefaultApiInterface {
 
     /**
      * 
-     * @param {File} mODEL155694 
+     * @param {File} mODELe34253 
      * @param {string} [sourcemap] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApiInterface
      */
-    tealCompile(mODEL155694: File, sourcemap?: string, options?: AxiosRequestConfig): AxiosPromise<CompileResponse>;
+    tealCompile(mODELe34253: File, sourcemap?: string, options?: AxiosRequestConfig): AxiosPromise<CompileResponse>;
 
     /**
      * 
      * @param {string} contentType 
-     * @param {string} mODEL4228a9 
+     * @param {string} mODEL0c300b 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApiInterface
      */
-    tealDisassemble(contentType: string, mODEL4228a9: string, options?: AxiosRequestConfig): AxiosPromise<DisassembleResponse>;
+    tealDisassemble(contentType: string, mODEL0c300b: string, options?: AxiosRequestConfig): AxiosPromise<DisassembleResponse>;
 
     /**
      * 
@@ -5362,26 +5362,26 @@ export class DefaultApi extends BaseAPI implements DefaultApiInterface {
 
     /**
      * 
-     * @param {File} mODEL155694 
+     * @param {File} mODELe34253 
      * @param {string} [sourcemap] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public tealCompile(mODEL155694: File, sourcemap?: string, options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).tealCompile(mODEL155694, sourcemap, options).then((request) => request(this.axios, this.basePath));
+    public tealCompile(mODELe34253: File, sourcemap?: string, options?: AxiosRequestConfig) {
+        return DefaultApiFp(this.configuration).tealCompile(mODELe34253, sourcemap, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @param {string} contentType 
-     * @param {string} mODEL4228a9 
+     * @param {string} mODEL0c300b 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DefaultApi
      */
-    public tealDisassemble(contentType: string, mODEL4228a9: string, options?: AxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).tealDisassemble(contentType, mODEL4228a9, options).then((request) => request(this.axios, this.basePath));
+    public tealDisassemble(contentType: string, mODEL0c300b: string, options?: AxiosRequestConfig) {
+        return DefaultApiFp(this.configuration).tealDisassemble(contentType, mODEL0c300b, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

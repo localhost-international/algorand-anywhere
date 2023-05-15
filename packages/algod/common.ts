@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Algod Testnet V3 API v2
+ * Algod Mainnet V3 API v2
  * V2 API endpoint for algod operations.
  *
  * The version of the OpenAPI document: 3.15.0
