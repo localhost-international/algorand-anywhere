@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "------------------------------------------"
-echo '                     
+cat << "EOF"
+------------------------------------------
     __        __     
  .:--.'.   .:--.'.   
 / |   \ | / |   \ |  
@@ -10,13 +10,14 @@ echo '
 / /   | |_/ /   | |_ 
 \ \._,\ '/\ \._,\ '/ 
  `--'  `"  `--'  `"  
-'
-echo "Algorand Anywhere API OpenAPI Codegen"
-echo "------------------------------------------"
-echo "Usage:"
-echo "- ./script.sh generate-algod-api"
-echo "- ./script.sh generate-indexer-api"
-echo "------------------------------------------"
+
+Algorand Anywhere API OpenAPI Codegen
+------------------------------------------
+Usage:
+- ./script.sh generate-algod-api
+- ./script.sh generate-indexer-api
+------------------------------------------
+EOF
 
 overwrite_folder () {
   read -p "$1 exists. Overwrite? (y/n) " -n 1 -r
@@ -26,7 +27,7 @@ overwrite_folder () {
     rm -r $1
     npm run $2
   else
-    echo "Cancelled"
+    Cancelled"
   fi
 }
 
@@ -41,7 +42,7 @@ generate_api () {
 
 if [ -z "$1" ]
 then
-  echo "No flag provided."
+  No flag provided."
 elif [ "$1" = "generate-algod-api" ]
 then
   generate_api "./packages/algod" "api:codegen:algod"
@@ -49,5 +50,5 @@ elif [ "$1" = "generate-indexer-api" ]
 then
   generate_api "./packages/indexer" "api:codegen:indexer"
 else
-  echo "Unknown flag: $1"
+  Unknown flag: $1"
 fi
