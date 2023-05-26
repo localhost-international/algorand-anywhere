@@ -1,5 +1,5 @@
 {
-  "name": "react-native-algorand-sdk",
+  "name": "algorand-anywhere",
   "version": "0.1.0",
   "description": "",
   "scripts": {
@@ -14,14 +14,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/localhost-international/react-native-algorand-sdk.git"
+    "url": "git+https://github.com/localhost-international/algorand-anywhere.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/localhost-international/react-native-algorand-sdk/issues"
+    "url": "https://github.com/localhost-international/algorand-anywhere/issues"
   },
-  "homepage": "https://github.com/localhost-international/react-native-algorand-sdk#readme",
+  "homepage": "https://github.com/localhost-international/algorand-anywhere#readme",
   "dependencies": {
     "cross-var": "^1.1.0",
     "dotenv-cli": "^7.1.0"
