@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/algod --additional-properties='npmName=api,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\"",
-    "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/indexer --additional-properties='npmName=api,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\""
+    "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/algod --additional-properties='npmName=algod,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\"",
+    "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/indexer --additional-properties='npmName=indexer,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\""
   },
   "workspaces": [
     "packages/algod",
