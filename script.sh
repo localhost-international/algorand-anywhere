@@ -10,7 +10,6 @@ cat << "EOF"
 / /   | |_/ /   | |_ 
 \ \._,\ '/\ \._,\ '/ 
  `--'  `"  `--'  `"  
-
 Algorand Anywhere API OpenAPI Codegen
 ------------------------------------------
 Usage:
@@ -27,7 +26,7 @@ overwrite_folder () {
     rm -r $1
     npm run $2
   else
-    Cancelled"
+    echo "Cancelled"
   fi
 }
 
@@ -42,13 +41,15 @@ generate_api () {
 
 if [ -z "$1" ]
 then
-  No flag provided."
-elif [ "$1" = "generate-algod-api" ]
-then
-  generate_api "./packages/algod" "api:codegen:algod"
-elif [ "$1" = "generate-indexer-api" ]
-then
-  generate_api "./packages/indexer" "api:codegen:indexer"
+  echo "✌️"
 else
-  Unknown flag: $1"
+  if [ "$1" = "generate-algod-api" ]
+  then
+    generate_api "./packages/algod" "api:codegen:algod"
+  elif [ "$1" = "generate-indexer-api" ]
+  then
+    generate_api "./packages/indexer" "api:codegen:indexer"
+  else
+    echo "Unknown flag: $1"
+  fi
 fi
