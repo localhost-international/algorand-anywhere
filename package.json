@@ -6,7 +6,7 @@
     "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./src/algod --additional-properties='withInterfaces=true,supportsES6=true'\"",
     "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./src/indexer --additional-properties='withInterfaces=true,supportsES6=true'\""
   },
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/localhost-international/algorand-anywhere.git"
