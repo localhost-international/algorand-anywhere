@@ -45,10 +45,10 @@ then
 else
   if [ "$1" = "generate-algod-api" ]
   then
-    generate_api "./packages/algod" "api:codegen:algod"
+    generate_api "./src/algod" "api:codegen:algod"
   elif [ "$1" = "generate-indexer-api" ]
   then
-    generate_api "./packages/indexer" "api:codegen:indexer"
+    generate_api "./src/indexer" "api:codegen:indexer"
   else
     echo "Unknown flag: $1"
   fi
