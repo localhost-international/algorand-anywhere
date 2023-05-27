@@ -11,7 +11,7 @@
     "packages/indexer",
     "packages/sdk"
   ],
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/localhost-international/algorand-anywhere.git"
