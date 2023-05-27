@@ -4,7 +4,8 @@
   "description": "React Native/Expo compatible Algorand SDK",
   "main": "src/index.ts",
   "scripts": {
-    "develop": "nodemon src/index.ts"
+    "develop": "nodemon src/index.ts",
+    "build": "tsc -b"
   },
   "license": "MIT",
   "devDependencies": {

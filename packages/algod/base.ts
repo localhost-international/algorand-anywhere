@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Algod Testnet V3 API v2
+ * Algod Mainnet V3 API v2
  * V2 API endpoint for algod operations.
  *
  * The version of the OpenAPI document: 3.15.0
@@ -19,7 +19,7 @@ import type { Configuration } from './configuration';
 import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 
-export const BASE_PATH = "https://testnet-algorand.api.purestake.io/ps2".replace(/\/+$/, "");
+export const BASE_PATH = "https://mainnet-algorand.api.purestake.io/ps2".replace(/\/+$/, "");
 
 /**
  *

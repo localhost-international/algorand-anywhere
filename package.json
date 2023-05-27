@@ -1,30 +1,36 @@
 {
-  "name": "react-native-algorand-sdk",
+  "name": "@localhost/algorand-anywhere",
   "version": "0.1.0",
-  "description": "",
+  "description": "(Eventually) A light Algorand SDK for JavaScript, TypeScript and Deno applications.",
   "scripts": {
-    "api:codegen": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_TESTNET%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/api --additional-properties='npmName=api,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\""
+    "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/algod --additional-properties='npmName=algod,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\"",
+    "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./packages/indexer --additional-properties='npmName=indexer,npmVersion=0.1.0,withInterfaces=true,supportsES6=true'\""
   },
   "workspaces": [
-    "packages/api",
+    "packages/algod",
+    "packages/indexer",
     "packages/sdk"
   ],
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/localhost-international/react-native-algorand-sdk.git"
+    "url": "git+https://github.com/localhost-international/algorand-anywhere.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "LeslieOA <leslie@localhost.international>",
+  "license": "AGPL-3.0",
+  "publishConfig": {
+    "@localhost-international:registry": "https://npm.pkg.github.com"
+  },
   "bugs": {
-    "url": "https://github.com/localhost-international/react-native-algorand-sdk/issues"
+    "url": "https://github.com/localhost-international/algorand-anywhere/issues"
   },
-  "homepage": "https://github.com/localhost-international/react-native-algorand-sdk#readme",
+  "homepage": "https://github.com/localhost-international/algorand-anywhere#readme",
   "dependencies": {
     "cross-var": "^1.1.0",
     "dotenv-cli": "^7.1.0"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2"
-  }
+  },
+  "main": "index.js"
 }
