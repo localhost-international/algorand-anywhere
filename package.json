@@ -1,5 +1,5 @@
 {
-  "name": "@localhost/algorand-anywhere",
+  "name": "@localhost-international/algorand-anywhere",
   "version": "0.1.0",
   "description": "(Eventually) A light Algorand SDK for JavaScript, TypeScript and Deno applications.",
   "scripts": {
