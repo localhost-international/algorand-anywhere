@@ -14,7 +14,7 @@
   "author": "LeslieOA <leslie@localhost.international>",
   "license": "AGPL-3.0",
   "publishConfig": {
-    "@localhost-international:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "bugs": {
     "url": "https://github.com/localhost-international/algorand-anywhere/issues"

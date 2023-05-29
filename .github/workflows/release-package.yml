@@ -35,4 +35,4 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_CI_CD_TOKEN }}
+          NPM_TOKEN: ${{ secrets.PACKAGE_CI_CD_TOKEN }}
