@@ -12,8 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          always-auth: true
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_CI_CD_TOKEN }}" >> ~/.npmrc
+          registry-url: 'https://npm.pkg.github.com'
       - run: yarn install --frozen-lockfile
       # - run: yarn test
 
@@ -28,10 +27,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          always-auth: true
-          registry-url: https://npm.pkg.github.com/
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_CI_CD_TOKEN }}" >> ~/.npmrc
-      - run: yarn install --frozen-lockfile
-      - run: yarn publish
+          registry-url: 'https://npm.pkg.github.com'
+      - run: yarn publish --non-interactive
         env:
-          NPM_TOKEN: ${{ secrets.PACKAGE_CI_CD_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_CI_CD_TOKEN }}
