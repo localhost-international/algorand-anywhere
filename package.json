@@ -1,10 +1,10 @@
 {
   "name": "@localhost-international/algorand-anywhere",
-  "version": "0.1.17",
+  "version": "0.2.0",
   "description": "(Eventually) A light Algorand SDK for JavaScript, TypeScript and Deno applications.",
   "scripts": {
-    "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./src/algod --additional-properties='withInterfaces=true,supportsES6=true'\"",
-    "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_KEY% -g typescript-axios -o ./src/indexer --additional-properties='withInterfaces=true,supportsES6=true'\""
+    "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_TOKEN% -g typescript-axios -o ./src/algod --additional-properties='withInterfaces=true,supportsES6=true'\"",
+    "api:codegen:indexer": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_INDEXER%/swagger.json -a x-api-key:%ALGO_NODE_API_TOKEN% -g typescript-axios -o ./src/indexer --additional-properties='withInterfaces=true,supportsES6=true'\""
   },
   "private": false,
   "repository": {
@@ -27,5 +27,5 @@
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2"
   },
-  "main": "index.js"
+  "main": "src/index.ts"
 }
