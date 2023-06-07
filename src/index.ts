@@ -1,1 +1,1 @@
-export * as algorand from "./sdk";
+export { default } from "./sdk";
