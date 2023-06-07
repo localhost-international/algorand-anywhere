@@ -1,6 +1,6 @@
 {
   "name": "@localhost-international/algorand-anywhere",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "(Eventually) A light Algorand SDK for JavaScript, TypeScript and Deno applications.",
   "scripts": {
     "api:codegen:algod": "dotenv cross-var \"openapi-generator-cli generate -i %ALGO_NODE_MAINNET_ALGOD%/swagger.json -a x-api-key:%ALGO_NODE_API_TOKEN% -g typescript-axios -o ./src/algod --additional-properties='withInterfaces=true,supportsES6=true'\"",
