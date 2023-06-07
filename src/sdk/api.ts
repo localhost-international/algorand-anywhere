@@ -11,19 +11,37 @@ import {
 import CONFIG from "./config";
 import { logger } from "./utils/logger";
 
-export const algodConfig = new AlgodConfiguration({
-  apiKey: CONFIG.ALGO_NODE_API_TOKEN,
-  basePath: CONFIG.ALGO_NODE_DAEMON,
-});
-export const indexerConfig = new IndexerConfiguration({
-  apiKey: CONFIG.ALGO_NODE_API_TOKEN,
-  basePath: CONFIG.ALGO_NODE_INDEXER,
-});
-const api = {
-  algod: new AlgodDefaultApi(algodConfig),
-  indexer: new IndexerDefaultApi(indexerConfig),
-};
+class Api {
+  private algod: AlgodDefaultApi;
+  private indexer: IndexerDefaultApi;
 
-export default api;
+  constructor(
+    algoNodeApiToken: string,
+    algoNodeDaemonUrl: string,
+    algoNodeIndexerUrl: string
+  ) {
+    const algodConfig = new AlgodConfiguration({
+      apiKey: algoNodeApiToken,
+      basePath: algoNodeDaemonUrl,
+    });
+    const indexerConfig = new IndexerConfiguration({
+      apiKey: algoNodeApiToken,
+      basePath: algoNodeIndexerUrl,
+    });
+
+    this.algod = new AlgodDefaultApi(algodConfig);
+    this.indexer = new IndexerDefaultApi(indexerConfig);
+  }
+
+  getAlgod() {
+    return this.algod;
+  }
+
+  getIndexer() {
+    return this.indexer;
+  }
+}
+
+export default Api;
 
 logger("API Initialised");

@@ -1,4 +1,4 @@
-import api from "../api";
+import Api from "../api";
 
-export const accountInformation = async (account: string) =>
-  await api.algod.accountInformation(account);
+export const accountInformation = async (api: Api, account: string) =>
+  await api.getAlgod().accountInformation(account);

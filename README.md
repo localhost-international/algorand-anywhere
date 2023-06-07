@@ -12,12 +12,24 @@ The official `js-algorand-sdk` has yet to fully support React Native (although [
 As were building a mobile wallet using Expo EAS, we figured we could:
 
 - [x] Hack together an API with Swagger  
-- [ ] Create a light, Expo/React Native friendly SDK (10%)  
+- [ ] Create a light, Expo/React Native friendly SDK (15%)  
 - [ ] Learn more about the AVM (30%)  
 
 ## When?
 
-> Documentation in progress; check back later 
+### Install
+
+- `yarn add @localhost-international/algorand-anywhere`
+
+### Usage
+
+```typescript
+const algorandAnywhere = new AlgorandAnywhere("your-api-token", "your-algod-url", "your-indexer-url");
+const accountInfo = await algorandAnywhere.accountInformation("some-account-id");
+
+```
+
+
 
 ### Codegen
 
