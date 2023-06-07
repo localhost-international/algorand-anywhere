@@ -7,7 +7,7 @@ import { getStatus } from "./lib/getStatus";
 import { getTransactions } from "./lib/getTransactions";
 import { healthCheck } from "./lib/healthCheck";
 
-export class AlgorandAnywhere {
+export default class AlgorandAnywhere {
   private api: Api;
   constructor(
     algoNodeApiToken: string,
@@ -30,5 +30,8 @@ export class AlgorandAnywhere {
   }
   getTransactions(account: string) {
     return getTransactions(this.api, account);
+  }
+  healthCheck() {
+    return healthCheck(this.api);
   }
 }
