@@ -1,3 +1,3 @@
-import api from "../api";
+import Api from "../api";
 
-export const getGenesis = async () => await api.algod.getGenesis();
+export const getGenesis = async (api: Api) => await api.getAlgod().getGenesis();

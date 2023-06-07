@@ -1,3 +1,3 @@
-import api from "../api";
+import Api from "../api";
 
-export const getStatus = async () => await api.algod.getStatus();
+export const getStatus = async (api: Api) => await api.getAlgod().getStatus();

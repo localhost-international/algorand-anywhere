@@ -1,3 +1,3 @@
-import api from "../api";
+import Api from "../api";
 
-export const healthCheck = async () => await api.algod.healthCheck();
+export const healthCheck = async (api: Api) => await api.getAlgod().healthCheck();

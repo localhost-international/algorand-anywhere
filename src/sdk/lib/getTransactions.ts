@@ -1,5 +1,5 @@
-import api from "../api";
+import Api from "../api";
 
-export const getTransactions = async (account: string) => {
-  return await api.indexer.lookupAccountTransactions(account);
+export const getTransactions = async (api: Api, account: string) => {
+  return await api.getIndexer().lookupAccountTransactions(account);
 };
