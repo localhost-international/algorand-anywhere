@@ -24,7 +24,7 @@ export default class AlgorandAnywhere {
   getAssetById(assetId: number) {
     return getAssetById(this.api, assetId);
   }
-  getAssestsByIds(assetIds: AssetHolding[]) {
+  getAssetsByIds(assetIds: AssetHolding[]) {
     return getAssetsByIds(this.api, assetIds);
   }
   getGenesis() {
