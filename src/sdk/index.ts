@@ -3,7 +3,7 @@ import Api from "./api";
 
 import { accountInformation } from "./lib/accountInformation";
 import { getAssetById } from "./lib/getAssetById";
-import { getAssetsById } from "./lib/getAssetsById";
+import { getAssetsByIds } from "./lib/getAssetsByIds";
 import { getGenesis } from "./lib/getGenesis";
 import { getStatus } from "./lib/getStatus";
 import { getTransactions } from "./lib/getTransactions";
@@ -24,8 +24,8 @@ export default class AlgorandAnywhere {
   getAssetById(assetId: number) {
     return getAssetById(this.api, assetId);
   }
-  getAssestsById(assetIds: AssetHolding[]) {
-    return getAssetsById(this.api, assetIds);
+  getAssestsByIds(assetIds: AssetHolding[]) {
+    return getAssetsByIds(this.api, assetIds);
   }
   getGenesis() {
     return getGenesis(this.api);
