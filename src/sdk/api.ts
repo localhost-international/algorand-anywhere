@@ -17,16 +17,15 @@ class Api {
 
   constructor(
     algoNodeApiToken: string,
-    algoNodeDaemonUrl: string,
-    algoNodeIndexerUrl: string
+    algoNodeBaseUrl: string,
   ) {
     const algodConfig = new AlgodConfiguration({
       apiKey: algoNodeApiToken,
-      basePath: algoNodeDaemonUrl,
+      basePath: `${algoNodeBaseUrl}/ps2`,
     });
     const indexerConfig = new IndexerConfiguration({
       apiKey: algoNodeApiToken,
-      basePath: algoNodeIndexerUrl,
+      basePath: `${algoNodeBaseUrl}/idx2`,
     });
 
     this.algod = new AlgodDefaultApi(algodConfig);

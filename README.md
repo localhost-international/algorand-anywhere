@@ -22,14 +22,24 @@ As were building a mobile wallet using Expo EAS, we figured we could:
 
 - `yarn add @localhost-international/algorand-anywhere`
 
+For Expo, also install the following dependencies:
+
+- `yarn add react-native-get-random-values react-native-get-random-values`
+
+...and import at the top of your `App.tsx`: 
+
+```ts
+import "react-native-url-polyfill/auto";
+import "react-native-get-random-values";
+```
+
 ### Usage
 
 ```typescript
 import * as AlgorandAnywhere from "@localhost-international/algorand-anywhere";
 const algorandAnywhere = new AlgorandAnywhere(
   "your-api-token",
-  "your-algod-url",
-  "your-indexer-url"
+  "your-algo-node-base-url",
 );
 const accountInfo = await algorandAnywhere.accountInformation(
   "some-account-id"

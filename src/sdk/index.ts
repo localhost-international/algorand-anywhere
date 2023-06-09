@@ -13,10 +13,9 @@ export default class AlgorandAnywhere {
   private api: Api;
   constructor(
     algoNodeApiToken: string,
-    algoNodeDaemonUrl: string,
-    algoNodeIndexerUrl: string
+    algoNodeBaseUrl: string,
   ) {
-    this.api = new Api(algoNodeApiToken, algoNodeDaemonUrl, algoNodeIndexerUrl);
+    this.api = new Api(algoNodeApiToken, algoNodeBaseUrl);
   }
   accountInformation(account: string) {
     return accountInformation(this.api, account);
